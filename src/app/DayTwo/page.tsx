@@ -3,11 +3,6 @@
 import { useEffect, useState } from "react";
 import { ClockFace, ClockWrap, Hand } from "./pageStyled";
 
-interface KeyProps {
-  keyCode: number;
-  keyName: string;
-}
-
 const DayTwo = () => {
   const [angle, setAngle] = useState({ hour: 0, minute: 0, second: 0 });
   const newDate = () => {
