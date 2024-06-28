@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SetStateAction, useState } from "react";
+import React, { SetStateAction, useState } from "react";
 import { Heading, ImageHolder, Label, Wrapper } from "./pageStyled";
 
 const DayThree = () => {
@@ -9,15 +9,15 @@ const DayThree = () => {
   const [blur, setBlur] = useState("5");
   const [color, setColor] = useState("#000000");
 
-  const handleRange = (e: { target: { value: SetStateAction<string> } }) => {
+  const handleRange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSpacing(e.target.value);
   };
 
-  const handleBlur = (e: { target: { value: SetStateAction<string> } }) => {
+  const handleBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBlur(e.target.value);
   };
 
-  const handleColor = (e: { target: { value: SetStateAction<string> } }) => {
+  const handleColor = (e: React.ChangeEvent<HTMLInputElement>) => {
     setColor(e.target.value);
   };
 
